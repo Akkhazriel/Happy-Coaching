@@ -1,0 +1,22 @@
+mixin benefitsCards(svg, title, text)
+    .benefits-cards__item
+        img(src=`./img/benefits/${svg}.svg`, alt='Card')
+        h3.benefits-cards__title= title
+        p.benefits-cards__description= text
+
+section.benefits
+    .benefits__container
+        .benefits__wrapper
+            .benefits__content
+                .benefits-content__caption
+                    h2.benefits-content-caption__title I can help you in these particular areas.
+                .benefits-content-caption__description
+                    p.benefits-content-description__text-cl1.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.
+                    p.benefits-content-description__text-cl2.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.
+                        
+            .benefits__cards
+                +benefitsCards('01', '1:1 Coaching', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.')
+                +benefitsCards('02', 'Consultation', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.')
+                +benefitsCards('03', 'Group Coaching Sessions', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.')
