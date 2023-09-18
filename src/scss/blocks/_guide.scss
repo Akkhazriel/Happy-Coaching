@@ -1,0 +1,195 @@
+.guide {
+    &__container {
+        padding-top: 158px;
+        padding-bottom: 140px;
+        @media(max-width: 1440px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        align-items: center;
+        column-gap: 30px;
+        @media(max-width: 999px) {
+            flex-direction: column;
+            row-gap: 30px;
+        }
+        @media(max-width: 499px) {
+            row-gap: 80px;
+        }
+    }
+    &__content {
+        max-width: 550px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 22px;
+        align-items: flex-start;
+        @media(max-width: 1199px) {
+            row-gap: 16px;
+        }
+        @media(max-width: 1099px) {
+            max-width: 400px;
+        }
+        @media(max-width: 999px) {
+            align-items: center;
+            text-align: center;
+        }
+        .guide__title {
+            font-size: 48px;
+            max-width: 490px;
+            @media(max-width: 1199px) {
+                font-size: 34px;
+            }
+            @media(max-width: 399px) {
+                font-size: 28px;
+                max-width: 320px;
+            }
+            @media(max-width: 320px) {
+                font-size: 22px;
+                max-width: 250px;
+            }
+        }
+        .guide__desc-b {
+            color: var(--main-color-1);
+            font-family: var(--main-font);
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 33px;
+            @media(max-width: 1199px) {
+                font-size: 16px;
+                max-width: 450px;
+                line-height: 22px;
+            }
+            @media(max-width: 399px) {
+                font-size: 14px;
+                max-width: 320px;
+            }
+        }
+        .guide__desc-m {
+            color: var(--main-color-1);
+            font-family: var(--main-font);
+            font-size: 17px;
+            font-weight: 400;
+            @media(max-width: 1199px) {
+                font-size: 13px;
+                max-width: 450px;
+            }
+            @media(max-width: 399px) {
+                font-size: 10px;
+                max-width: 320px;
+            }
+        }
+        .guide-btn {
+            padding: 9px 45px;
+            border-radius: 10px;
+            transition: .3s linear;
+            &:hover {
+                background: #1a927e;
+            }
+            @media(max-width: 320px) {
+                padding: 9px 26px;
+            }
+        }
+    }
+    &__picture {
+        background: url('./../img/guide/guide-bg.png');
+        width: 446px;
+        height: 581px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 181px;
+        position: relative;
+        @media(max-width: 499px) {
+            width: 300px;
+        }
+        @media(max-width: 320px) {
+            width: 240px;
+        }
+        &::after {
+            position: absolute;
+            content: 'Free guide!';
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            font-size: 14px;
+            color: var(--light);
+            font-weight: 600;
+            top: -8%;
+            right: -8%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--main-font);
+            letter-spacing: 1px;
+            @media(max-width: 550px) {
+                right: 0;
+            }
+        }
+        .guide-pic__title {
+            color: var(--light);    
+            font-size: 46px;
+            max-width: 220px;
+            font-family: var(--accent-font);
+            margin-top: 50px;
+            margin-left: 38px;
+            @media(max-width: 499px) {
+                font-size: 32px;
+                max-width: 190px;
+            }
+        }
+        .guide-pic__banner {
+            width: 100%;
+            height: 78px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            justify-content: center;
+            background: rgba(65, 58, 125, 0.30);;
+            .guide-pic-banner__title {
+                font-size: 12px;
+                color: var(--light);
+                font-family: var(--main-font);
+                font-weight: 600;
+                position: relative;
+                text-align: left;
+                margin-left: 26.5%;
+                @media(max-width: 320px) {
+                    margin-left: 0;
+                    text-align: center;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background-image: url('./../img/guide/guide-icon.png');
+                    width: 40px;
+                    height: 40px;
+                    top: 0;
+                    left: -15%;
+                    @media(max-width: 499px) {
+                        left: -23%;
+                    }
+                    @media(max-width: 320px) {
+                        top: 350%;
+                        left: 43%;
+                    }
+                }
+            }
+            .guide-pic-banner__desc {
+                font-size: 10px;
+                color: var(--light);
+                font-family: var(--main-font);
+                font-weight: 400;
+                margin-left: 26.5%;
+                @media(max-width: 320px) {
+                    margin-left: 0;
+                    text-align: center;
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}
