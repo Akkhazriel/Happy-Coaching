@@ -1,0 +1,77 @@
+.blog {
+    &__container {
+        padding-top: 97px;
+        padding-bottom: 97px;
+        @media(max-width: 1440px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        row-gap: 65px;
+    }
+    &__title {
+        font-size: 48px;
+        max-width: 680px;
+        text-align: center;
+        @media(max-width: 599px) {
+            font-size: 32px;
+            max-width: 350px;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-evenly;
+        column-gap: 41px;
+        @media(max-width: 1199px) {
+            flex-wrap: wrap;
+            row-gap: 41px;
+        }
+        .blog__item {
+            max-width: 356px;
+            border: 1px solid var(--bg-color);
+            text-align: left;
+            img {
+                max-width: 100%;
+            }
+            .blog-item__text {
+                display: flex;
+                flex-direction: column;
+                row-gap: 12px;
+                padding: 16px 26px 24px 26px;
+                @media(max-width: 399px) {
+                    padding: 16px 13px 12px 13px;
+                }
+                .blog-item-text__title {
+                    font-size: 24px;
+                    @media(max-width: 399px) {
+                        font-size: 16px;
+                    }
+                }
+                .blog-item-text__desc {
+                    color: var(--main-color-1);
+                    font-size: 16px;
+                    font-family: var(--main-font);
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.32px;
+                    @media(max-width: 399px) {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .blog-btn {
+        padding: 9px 70px;
+        font-size: 14px;
+        border-radius: 10px;
+        @media(max-width: 299px) {
+            padding: 9px 50px;
+        }
+    }
+}

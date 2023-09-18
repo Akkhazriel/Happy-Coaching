@@ -1,0 +1,16 @@
+mixin blogItem(png, title, desc)
+    .blog__item
+        img(src=`./img/blog/${png}.png`, alt="Photo").blog-item__img
+        .blog-item__text
+            h3.blog-item-text__title.text-title= title
+            p.blog-item-text__desc= desc
+
+section.blog
+    .blog__container
+        .blog__wrapper
+            h1.blog__title.text-title Stay Motivated, read the weekly blog articles.
+            .blog__list
+                +blogItem('01', 'Balancing your love and work life.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.')
+                +blogItem('02', 'A short break from Social Media is important.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.')                
+                +blogItem('03', 'How to be 1% Better Every Day', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.')
+            a(href="#!").button.blog-btn Ream more blogs 
