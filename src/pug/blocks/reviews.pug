@@ -1,0 +1,20 @@
+mixin reviewItem(name, png)
+    .review-list__item
+        p.review-list-item__desc.
+            "I gained so much confidence in my ability to connect and deepen my relationships with people. "
+        a.review-list-item__name= name
+        .review-list-item__img
+            img(src=`./img/reviews/${png}.png`, alt="Avatar")
+        form.review-list-item-rating
+            for i in [5,4,3,2,1]		
+                input(type="radio", id="star_"+i, name="star", value=""+i)
+                label(for="star_"+i)
+
+section.reviews
+    .reviews__container
+        .reviews__wrapper
+            h1.reviews__title.text-title Hear out what my clients say about me.
+            .reviews__list
+                +reviewItem('Jane', '01')
+                +reviewItem('Catherine', '02')
+                +reviewItem('Jane', '03')
