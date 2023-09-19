@@ -1,0 +1,106 @@
+.cta {
+    &__container {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 96px;
+        @media(max-width: 1440px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        background: var(--bg-color);
+        justify-content: space-evenly;
+        max-width: 1216px;
+        column-gap: 42px;
+        align-items: center;
+        @media(max-width: 899px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        padding-left: 64px;
+        row-gap: 40px;
+        align-items: flex-start;
+        @media(max-width: 1099px) {
+            max-width: 400px;
+        }
+        @media(max-width: 899px) {
+            text-align: center;
+            align-items: center;
+            padding-left: 0;
+            padding: 24px;
+        }
+        .cta-content__text {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            .cta-text__title {
+                font-size: 36px;
+                @media(max-width: 399px) {
+                    font-size: 24px;
+                    max-width: 500px;
+                }
+            }
+            .cta-text__desc {
+                color: rgba(74, 85, 108, 0.50);
+                font-family: var(--accent-font);
+                line-height: 30px;
+                font-weight: 400;
+                font-size: 20px;
+                @media(max-width: 399px) {
+                    font-size: 14px;
+                }
+                @media(max-width: 299px) {
+                    font-size: 10px;
+                }
+            }
+        }
+        .cta-content__btn {
+            padding: 9px 93px;
+            border-radius: 10px;
+            transition: .3s linear;
+            &:hover {
+                background: #178572;
+            }
+            @media(max-width: 399px) {
+                padding: 9px 60px;
+            }
+            @media(max-width: 299px) {
+                padding: 9px 40px;
+
+            }
+        }
+    }
+    &__picture {
+        position: relative;
+        padding-top: 48px;
+        .cta-picture__addition {
+            position: absolute;
+            top: 15%;
+            left: 20px;
+            background: var(--light);
+            color: #428B7F;
+            font-family: var(--accent-font);
+            font-weight: 600;
+            padding: 12px 19px 12px 42px;
+            border-radius: 6px;
+            @media(max-width: 399px) {
+                top: 20%;      
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                background-image: url('./../img/cta/meet-logo.svg');
+                width: 17px;
+                height: 20px;
+                left: 15%;
+            }
+        }
+    }
+}
